@@ -6,3 +6,7 @@ class Dialog(ABC):
     def create_button(self) -> Button:
         pass
 
+    def render(self):
+        button = self.create_button()
+        button.render()
+        button.on_click()
